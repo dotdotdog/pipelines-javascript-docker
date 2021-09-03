@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dotdotdogpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotdotdogpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dotdotdogpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dotdotdogpipelinesjavascriptdocker 
+          image: mydotdotdogcontainerregistry01.azurecr.io/dotdotdogpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
